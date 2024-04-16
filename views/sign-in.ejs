@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <title>Sign in</title>
+</head>
+
+<body>
+
+    <section class="signup-page">
+        <section class="signup-section">
+            <h1>Sign In</h1>
+            <h2> Sign in into your account</h2>
+            <img src="" alt="">
+        </section>
+        <section class="signup-section signup-user-section">
+            <h3 id="error" class="error-comment"></h3>
+            <form id="signup-form" class="signup-user-form">
+                <fieldset class="signup-user-form-area">
+                    <label for="email">Email Address</label>
+                    <input id="email" autocomplete="email" name="email" required type="text"></input>
+                </fieldset>
+                <fieldset class="signup-user-form-area">
+                    <label for="password">Password</label>
+                    <input id="password" autocomplete="current-password" minlength="6" name="password" required
+                        type="password"></input>                   
+                </fieldset>
+                <input id="signup-button"  type="submit" value="Sign in ⛳"></input>
+            </form>
+            <p> Don't have an account? <a href="/users/sign-up">Sign up here</a></p>
+        </section>
+    </section>
+    <script src="/js/sign-in-script.js" type="module"></script>
+</body>
+
+</html>
