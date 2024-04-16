@@ -17,4 +17,6 @@ admin.initializeApp(
     {
         credential: admin.credential.cert(data)
     });
+
+console.log()
 export default admin;
