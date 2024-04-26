@@ -7,6 +7,7 @@ import * as path from "path";
 import { fileURLToPath } from "url";
 import usersRouter from "./routes/users.js";
 import ordersRouter from "./routes/orders.js";
+import db from './db/connection.js';
 
 
 // Use File Location of Index and Get Dir
@@ -116,6 +117,14 @@ function handle_500(req, res, next) {
             }
         });
 }
+
+
+
+
+/* S code */
+
+
+
 
 // Start Server
 app.listen(3000, () => {

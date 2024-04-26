@@ -47,17 +47,22 @@ router.use(upload.array());
 
 router.get('/', async (req, res) => {
     let collection = await db.collection("Products");
+
     let products = await collection.find({}).toArray();
+
+    console.log(products.length);
     res.render("products", { products: products });
 });
 
 
 router.get('/new-order', async (req, res) => {
     // Local Variables
-    let collection = await db.collection("Orders");
+    let collection = await db.collection("Products");
     let results = await collection.find({}).toArray();
 
-    res.render("new-order", { games: results });
+    console.log(results.length);
+
+    res.render("new-order", { Products: results });
 });
 
 
