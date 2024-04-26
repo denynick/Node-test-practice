@@ -89,7 +89,7 @@ router.post('/new-order', allowed, async (req, res) => {
 
 router.get('/my-orders', allowed, async (req, res) => {
     // Local Variables
-    let collection = await db.collection("orders");
+    let collection = await db.collection("Orders");
     let findID;
     let result;
     let document;
@@ -109,7 +109,7 @@ router.get('/my-orders', allowed, async (req, res) => {
 router.get("/:orderId", allowed, async (req, res, next) => {
     // Local Variables
     let findID;
-    let collection = await db.collection("orders");
+    let collection = await db.collection("Orders");
     let result;
     let userID;
     fb.auth().getUser(res.locals.uid).then(async (userRecord) => {
