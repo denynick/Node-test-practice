@@ -5,3 +5,12 @@ body {
 .signup-page {
     background: pink;
 }
+.product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.product-submit {
+    padding: 0.5rem;
+    color: red;
+}

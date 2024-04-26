@@ -12,8 +12,7 @@
     <form action="orders/new-order" method="post">
         <section class="product-list">
             <% for (let i=0; i < Products.length; i++) { %>
-                <section>
-                    <!-- <img class="token-img" src="/assets/img/token.png" alt="token"> -->
+                <section>                   
                     <label for="<%= Products[i].name %>">
                         <h3>
                             <%= Products[i].name %>
@@ -21,7 +20,13 @@
                         <p>
                            <img src="<%= Products[i].image %>" alt="<%= Products[i].image %>">
                         </p>
-                        
+                        <p>
+                            <%= Products[i].description %>
+                        </p>
+                        <p>
+                            Price: <%= Products[i].price %>                            
+                        </p>
+                      
                     </label>
                     <input type="checkbox" name="<%= Products[i].name %>" id="id[]">
                 </section>
